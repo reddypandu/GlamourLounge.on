@@ -11,13 +11,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik:wght@300,400;700&display=swap"
         rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body d="top">
+<body id="top">
     <header class="header">
         <div class="header-top1">
             <div class="container1">
-
                 <ul class="header-top-list">
 
                     <li class="header-top-item">
@@ -129,19 +129,41 @@
 
         </style>
     </header>
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
     <script>
-        const navbar = document.querySelector(".header-bottom");
-        const navToggler = document.querySelector(".nav-toggle-btn");
-        const navLinks = document.querySelector(".navbar-link");
+        const navba = document.querySelector(".navbar");
+        const navToggle = document.querySelector(".nav-toggle-btn");
+        const navLink = document.querySelector(".navbar-link");
 
-        const toggleNav = () => navbar.classList.toggle("active");
+        const toggleNav = () => navba.classList.toggle("active");
 
-        addEventOnElem(navToggler, "click", toggleNav);
+        addEventOnElem(navToggle, "click", toggleNav);
 
 
-        const closeNav = () => navbar.classList.remove("active");
+        const closeNav = () => navba.classList.remove("active");
 
-        addEventOnElem(navLinks, "click", closeNav);
+
+
+        const heade = document.querySelector(".header-bottom");
+        const backTopBt = document.querySelector(".back-top-btn");
+
+        const headerActiv = function () {
+            if (window.scrollY > 100) {
+                heade.classList.add("active");
+                backTopBt.classList.add("active");
+            } else {
+                heade.classList.remove("active");
+                backTopBt.classList.remove("active");
+            }
+        };
+
+        addEventOnElem(window, "scroll", headerActiv);
     </script>
     <!-- 
     - ionicon link

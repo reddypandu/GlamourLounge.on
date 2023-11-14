@@ -177,7 +177,7 @@ body {
 
 .container { padding-inline: 15px; }
 
-.section { padding-block: var(--section-padding); }
+/* .section { padding-block: var(--section-padding); } */
 
 .has-before,
 .has-after {
@@ -429,7 +429,9 @@ body {
   padding-block-start: calc(var(--section-padding) + 40px);
   background-position: left;
 }
-
+.section.hero{
+   padding-block: var(--section-padding);
+}
 .hero::before {
   /* inset: ; */
   background-color: var(--rich-black-fogra-39_50);
@@ -454,8 +456,16 @@ body {
 .about{
   background-image:url(../images/about-left.png);
   background-repeat:no-repeat; 
-  background-position:left bottom;
-
+  background-position:center;
+  display: flex;
+  flex-direction: column;
+}
+section.about{
+  display: unset;
+}
+.about .row{
+  display: flex;
+  flex-direction: column;
 }
 .about h1{
   font-size:  var(--fs-30);
@@ -470,7 +480,7 @@ body {
 }
 
 .about .row .image{
-  flex:1 1 50rem;
+  
   padding: 3rem;
 }
 
@@ -478,7 +488,6 @@ body {
   width: 100%;
 }
 .about .row .content{
-  flex:1 1 51rem;
   padding:5rem;
 }
 
@@ -548,7 +557,6 @@ body {
   box-shadow: var(--shadow-1);
   border-radius: var(--radius-8);
 }
-
 .service-card .card-icon {
   color: var(--indian-yellow);
   font-size: 70px;
