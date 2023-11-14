@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="assets/css/flaticon.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 
@@ -42,7 +43,7 @@
 
     <div id="header"></div>
     <div class="img">
-        <img src=" ./assets/images/gla2.jpg" class="img1" alt="" />
+        <img src=" ./assets/images/gla2.jpg" class="img1" alt="" data-aos="fade-up" />
     </div>
 
     <section class="section gallery" id="gallery" aria-label="photo gallery">
@@ -51,7 +52,7 @@
             <div class="title-wrapper">
 
                 <div>
-                    <h2 class="h2 section-title">Latest Photo Gallery</h2>
+                    <h2 class="h2 section-title" data-aos="fade-up">Latest Photo Gallery</h2>
 
                     <p class="section-text">
                         <!-- Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua
@@ -61,7 +62,7 @@
 
             </div>
 
-            <ul class="grid-list">
+            <ul class="grid-list" data-aos="fade-up">
 
                 <li>
                     <div class="gallery-card">
@@ -268,6 +269,10 @@
         });
     </script>
     <script src="./assets/js/script.js" defer></script>
-    < </body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
 
 </html>
