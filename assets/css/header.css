@@ -161,7 +161,7 @@
   
   .container1 { padding-inline: 15px; }
   
-  .section { padding-block: var(--section-padding); }
+  /* .section { padding-block: var(--section-padding); } */
   
   .has-before,
   .has-after {
@@ -320,12 +320,13 @@
     width: 100%;
     padding-block: 10px;
     z-index: 4;
+    background-color:transparent;
   }
   
   .header-bottom.active {
     position: fixed;
     top: 0;
-    background-color: var(--rich-black-fogra-39);
+    background-color:black;
     transform: translateY(-100%);
     animation: slideIn 0.5s ease forwards;
   }
@@ -375,6 +376,7 @@
   .navbar.active {
     max-height: 321px;
     transition-duration: 0.5s;
+    
   }
   
   
