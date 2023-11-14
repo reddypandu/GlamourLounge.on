@@ -458,9 +458,34 @@ body {
   display: flex;
   flex-direction: column;
 }
-section.about{
- 
+/* .about h2::after{
+  content: "";
+  width:0;
+  height: 2px;
+  background-color: #8a6d46;
+  display: none;
+  animation: a 1s linear infinite;
 }
+@keyframes a{
+  0%{
+      width:10%,
+  }
+  25%{
+      width:25%,
+  }
+  50%{
+      width:50%,
+  }
+  75%{
+      width:75%,
+  }
+  100%{
+      width:100%;
+  }
+}
+.about h2:hover::after{
+
+} */
 .about .row{
   display: flex;
   flex-direction: column;
@@ -841,11 +866,11 @@ textarea.input-field {
 }
 .map h2::after{
   content: "";
-  width:100%;
+  width:0;
   height: 2px;
   background-color: #8a6d46;
   display: none;
-  animation: u 10s linear infinite;
+  animation: u 1s linear infinite;
 }
 @keyframes u{
   0%{
@@ -948,7 +973,7 @@ textarea.input-field {
 }
 
 .footer-link {
-  color: var(--white_50);
+  color: rgb(220, 211, 211);
   gap: 10px;
   margin-block-start: 8px;
   transition: var(--transition-1);
@@ -975,7 +1000,7 @@ textarea.input-field {
   transition: var(--transition-1);
 }
 
-.blog-card .card-title:is(:hover, :focus) { color: var(--indian-yellow); }
+.blog-card .card-title:is(:hover, :focus) { color: rgb(220, 211, 211); }
 
 .blog-card .card-date {
   gap: 5px;
@@ -993,7 +1018,7 @@ textarea.input-field {
 }
 
 .footer-list-item ion-icon {
-  color: var(--indian-yellow);
+  color: rgb(233, 233, 36);
   font-size: 18px;
   flex-shrink: 0;
   --ionicon-stroke-width: 50px;
@@ -1001,7 +1026,7 @@ textarea.input-field {
 }
 
 .contact-link {
-  color: var(--white_50);
+  color: rgb(220, 211, 211);
   transition: var(--transition-1);
 }
 
@@ -1058,7 +1083,11 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 /**
  * responsive for large than 575px screen
  */
-
+@media(max-width:574px){
+  .section.hero{
+    padding-block: 200px;
+  }
+}
 @media (min-width: 575px) {
 
   /**
@@ -1341,6 +1370,16 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
     color:var(--indian-yellow);
   }
 }
+@media(max-width:992px){
+  .map{
+    padding: 0;
+    padding: 10px;
+  }
+  .section.container.about{
+    padding: 1rem;
+    margin: 0;
+  }
+}
 @media (min-width: 992px) {
 
   /**
@@ -1366,7 +1405,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
   .container { max-width: 960px; }
 
 
-
+  
   /**
    * HEADER
    */
@@ -1414,7 +1453,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
    * PRICING
    */
 
-  .pricing .grid-list { grid-template-columns: 1fr 1fr; }
+  .pricing .grid-list { grid-template-columns: 1fr; }
 
   .pricing-card { height: 100%; }
 
