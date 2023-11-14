@@ -88,7 +88,7 @@
   }
   
   .footer-link {
-    color: var(--white_50);
+    color: rgb(220, 211, 211);
     gap: 10px;
     margin-block-start: 8px;
     transition: var(--transition-1);
@@ -115,7 +115,7 @@
     transition: var(--transition-1);
   }
   
-  .blog-card .card-title:is(:hover, :focus) { color: var(--indian-yellow); }
+  .blog-card .card-title:is(:hover, :focus) { color: rgb(220, 211, 211); }
   
   .blog-card .card-date {
     gap: 5px;
@@ -133,7 +133,7 @@
   }
   
   .footer-list-item ion-icon {
-    color: var(--indian-yellow);
+    color: rgb(233, 233, 36);
     font-size: 18px;
     flex-shrink: 0;
     --ionicon-stroke-width: 50px;
@@ -141,7 +141,7 @@
   }
   
   .contact-link {
-    color: var(--white_50);
+    color: rgb(220, 211, 211);
     transition: var(--transition-1);
   }
   
