@@ -16,10 +16,10 @@ app.post("/send-email", (req, res) => {
 
   // Set up Nodemailer transporter
   const transporter = nodemailer.createTransport({
-    service: "hotmail",
+    service: "gmail",
     auth: {
-      user: "pavan@thepatternscompany.com", // replace with your Gmail address
-      pass: "1234!@#$Prasanna", // replace with your Gmail password
+      user: "pandureddypatterns@gmail.com", // replace with your Gmail address
+      pass: "Pandu@12", // replace with your Gmail password
     },
   });
 

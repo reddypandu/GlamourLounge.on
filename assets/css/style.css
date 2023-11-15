@@ -535,6 +535,8 @@ body {
 }
 .about .row .content{
   padding:5rem;
+  text-align: center;
+  max-width: 1000px;
 }
 
 .about .row .content h3{
@@ -598,13 +600,14 @@ body {
 .service .section-text { margin-block: 15px 55px; }
 
 .service-card {
-  background-color: var(--white);
+  background-color: var(--indian-yellow);
   padding: 60px 25px;
   box-shadow: var(--shadow-1);
   border-radius: var(--radius-8);
+  margin-bottom: 10px;
 }
 .service-card .card-icon {
-  color: var(--indian-yellow);
+  color: white;
   font-size: 70px;
   line-height: 1;
 }
@@ -612,15 +615,16 @@ body {
 .service-card .card-title {
   margin-block: 15px 12px;
   transition: var(--transition-1);
+  color: white;
 }
 
-.service-card .card-title:is(:hover, :focus) { color: var(--indian-yellow); }
+.service-card .card-title:is(:hover, :focus) { color: white; }
 
-.service-card .card-text { margin-block-end: 30px; }
+.service-card .card-text { margin-block-end: 30px;color: white; }
 
 .service-card .card-btn {
   color: var(--indian-yellow);
-  background-color: var(--white);
+  background-color: var(--indian-yellow);
   max-width: max-content;
   margin-inline: auto;
   font-size: 20px;
@@ -631,8 +635,8 @@ body {
 }
 
 .service-card:is(:hover, :focus-within) .card-btn {
-  background-color: var(--indian-yellow);
-  color: var(--white);
+  background-color: var(--white);
+ 
 }
 
 
@@ -897,19 +901,13 @@ textarea.input-field {
 }
 @keyframes u{
   0%{
-      width:10%,
-  }
-  25%{
-      width:25%,
+      width:100%,
   }
   50%{
-      width:50%,
-  }
-  75%{
-      width:75%,
+    width: 100%;
   }
   100%{
-      width:100%;
+      width:100%,
   }
 }
 .map h2:hover::after{
