@@ -209,7 +209,7 @@
   
   .btn {
     color: var(--white);
-    background-color: var(--indian-yellow);
+    background-color: black;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -221,10 +221,11 @@
     text-transform: uppercase;
     border-radius: var(--radius-5);
     overflow: hidden;
+    border: 0.5px solid white;
   }
   
   .btn::before {
-    background-color: var(--eerie-black-1);
+    background-color: hsl(36, 61%, 58%);
     inset: 0;
     z-index: -1;
     transform: skewY(-15deg) scaleY(0);
@@ -306,7 +307,7 @@
   }
   
   .header-top-list .social-link {
-    color: var(--sonic-silver);
+    color: var(--indian-yellow);
     font-size: 15px;
     transition: var(--transition-1);
   }
@@ -320,13 +321,13 @@
     width: 100%;
     padding-block: 10px;
     z-index: 4;
-    background-color:transparent;
+    background-color:var(--indian-yellow);
   }
   
   .header-bottom.active {
     position: fixed;
     top: 0;
-    background-color:black;
+    background-color:var(--indian-yellow);
     transform: translateY(-100%);
     animation: slideIn 0.5s ease forwards;
   }
@@ -426,7 +427,7 @@
     transition: var(--transition-1);
   }
   
-  .navbar-link:is(:hover, :focus) { color: var(--indian-yellow); }
+  .navbar-link:is(:hover, :focus) { color: rgb(209, 192, 192); }
   
 /**
  * responsive for large than 575px screen
@@ -480,7 +481,7 @@
       transform: translateX(-50%);
       max-width: 600px;
       z-index: 4;
-      background-color: var(--white);
+      background-color: white;
       border-radius: 0 0 20px 20px;
     }
   
@@ -492,7 +493,7 @@
   
     .header-top-item ion-icon {
       font-size: 18px;
-      color: var(--indian-yellow);
+      color:var(--indian-yellow);
       --ionicon-stroke-width: 50px;
     }
   

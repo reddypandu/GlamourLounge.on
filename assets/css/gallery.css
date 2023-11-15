@@ -70,13 +70,24 @@ body::-webkit-scrollbar {
   background-color: var(--indian-yellow);
   color: var(--white);
 }
+@media (max-width:574px){
+    .section-title{
+        padding-top: 100px;
+    }
+}
 @media(min-width:575px){
     .gallery .grid-list { grid-template-columns: 1fr 1fr; }
+    .section-title{
+        padding-top: 150px;
+    }
 }
 @media(min-width:768px){
     .gallery .section-text { margin-inline: 0; }
 
   .gallery-card .card-content { inset: 30px; }
+  .section-title{
+    padding-top: 150px;
+  }
 }
 @media(min-width:992px){
     .gallery .title-wrapper {

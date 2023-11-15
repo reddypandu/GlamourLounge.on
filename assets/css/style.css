@@ -273,7 +273,13 @@ body {
 .btn:is(:hover, :focus)::before { transform: skewY(-15deg) scaleY(2.5); }
 
 .text-center { text-align: center; }
-
+.header-bottom.active .btn{
+  background-color: black;
+  border: 0.5px solid white;
+}
+.header-bottom.active .btn::before{
+  background-color: hsl(36, 61%, 58%);
+}
 .grid-list {
   display: grid;
   gap: 30px;
@@ -344,12 +350,12 @@ body {
 }
 
 .header-top-list .social-link {
-  color: var(--sonic-silver);
+  color: white;
   font-size: 15px;
   transition: var(--transition-1);
 }
 
-.header-top-list .social-link:is(:hover, :focus) { color: var(--indian-yellow); }
+.header-top-list .social-link:is(:hover, :focus) { color: whitesmoke; }
 
 .header-bottom {
   position: absolute;
@@ -363,7 +369,7 @@ body {
 .header-bottom.active {
   position: fixed;
   top: 0;
-  background-color: var(--rich-black-fogra-39);
+  background-color: var(--indian-yellow);
   transform: translateY(-100%);
   animation: slideIn 0.5s ease forwards;
 }
@@ -1106,7 +1112,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
  */
 @media(max-width:574px){
   .section.hero{
-    padding-block: 280px;
+    padding-block: 320px;
   }
 }
 @media (min-width: 575px) {
@@ -1155,7 +1161,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
     transform: translateX(-50%);
     max-width: 600px;
     z-index: 4;
-    background-color: var(--white);
+    background-color: var(--indian-yellow);
     border-radius: 0 0 20px 20px;
   }
 
@@ -1167,7 +1173,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
   .header-top-item ion-icon {
     font-size: 18px;
-    color: var(--indian-yellow);
+    color:white;
     --ionicon-stroke-width: 50px;
   }
 
@@ -1176,9 +1182,9 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
     font-weight: var(--fw-500);
   }
 
-  .header-top-item .item-link { transition: var(--transition-1); }
+  .header-top-item .item-link { transition: var(--transition-1);color: white; }
 
-  .header-top-item .item-link:is(:hover, :focus) { color: var(--indian-yellow); }
+  .header-top-item .item-link:is(:hover, :focus) { color: grey; }
 
   .header-top-list { justify-content: space-between; }
 
@@ -1200,6 +1206,8 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
   /**
    * PRICING
    */
+
+
 
   .filter-btn .btn-icon {
     display: block;
@@ -1229,6 +1237,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
   .gallery .grid-list { grid-template-columns: 1fr 1fr; }
 
+  .appoin-card .section-title
 
 
   /**
