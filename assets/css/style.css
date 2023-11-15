@@ -1106,7 +1106,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
  */
 @media(max-width:574px){
   .section.hero{
-    padding-block: 200px;
+    padding-block: 280px;
   }
 }
 @media (min-width: 575px) {
