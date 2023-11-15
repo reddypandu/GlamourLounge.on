@@ -1112,7 +1112,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
  */
 @media(max-width:574px){
   .section.hero{
-    padding-block: 300px;
+    padding-block: 280px;
   }
   .header-top-list .social-link {
     color: hsl(36, 66%, 53%);
