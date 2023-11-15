@@ -124,8 +124,8 @@ bootstrap css link
               </li>
 
               <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-youtube"></ion-icon>
+                <a href="tel:+9173373 59025" class="social-link">
+                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
                 </a>
               </li>
 
@@ -919,7 +919,7 @@ bootstrap css link
                 suspendisse -->
               </p>
 
-              <form action="" class="appoin-form" data-aos="fade-up">
+              <form id="contactForm" class="appoin-form" data-aos="fade-up">
 
                 <div class="input-wrapper">
                   <input type="text" name="name" placeholder="Your Full Name" required class="input-field">
@@ -967,7 +967,30 @@ bootstrap css link
 
     </article>
   </main>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
 
+      const formData = new FormData(this);
+
+      fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        body: formData,
+        // headers: {
+        //   'Content-Type': 'application/json',
+        // },
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          alert('Email sent successfully!');
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Failed to send email. Please try again later.');
+        });
+    });
+  </script>
 
   <div class="map" data-aos="fade-right">
     <h2 data-aos="fade-up">Map Directions</h2>
@@ -1212,6 +1235,7 @@ bootstrap css link
   <script>
     AOS.init();
   </script>
+  <script src="server.js"></script>
 </body>
 
 </html>
